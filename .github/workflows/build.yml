@@ -28,7 +28,7 @@ jobs:
           go-version: ${{ matrix.go-version }}
 
       - name: Install dependencies
-        run: go get github.com/eclipse/paho.mqtt.golan
+        run: go get github.com/eclipse/paho.mqtt.golang
 
       - name: Build for ${{ matrix.arch }}
         env:
