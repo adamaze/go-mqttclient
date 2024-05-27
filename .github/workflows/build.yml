@@ -27,6 +27,9 @@ jobs:
         with:
           go-version: ${{ matrix.go-version }}
 
+      - name: Install dependencies
+        run: go mod download
+
       - name: Build for ${{ matrix.arch }}
         env:
           GOOS: linux
