@@ -1,4 +1,4 @@
-me: Go Cross-Compile
+name: Go Cross-Compile
 
 on:
   push:
