@@ -4,7 +4,6 @@ import (
     "flag"
     "fmt"
     "os"
-//    "time"
 
     MQTT "github.com/eclipse/paho.mqtt.golang"
 )
@@ -51,18 +50,9 @@ func main() {
         os.Exit(1)
     }
 
-    // Subscribe to topic
-    //if token := client.Subscribe(*topic, 1, nil); token.Wait() && token.Error() != nil {
-    //    fmt.Println(token.Error())
-    //    os.Exit(1)
-    //}
-
     // Publish a message
     token := client.Publish(*topic, 0, false, *message)
     token.Wait()
 
-    //time.Sleep(6 * time.Second)
-
     client.Disconnect(250)
 }
-
